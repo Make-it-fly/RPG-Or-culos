@@ -32,7 +32,7 @@ const oraculos = [
         'Os personagens são amigáveis uns com os outros.'
     ],
     'resultado neutro':[
-        'Os personagens estão neutros com relação ao outro',
+        'Os personagens estão indiferentes com relação ao outro',
         'Os personagens estão neutros com relação ao outro',
         'Os personagens estão neutros com relação ao outro'
     ],
@@ -73,11 +73,15 @@ const oraculos = [
         'Os personagens realizam um diálogo íntimo ou muito amigável',
         'Os personagens realizam um diálogo amigável',
         'Os personagens realizam um diálogo amigável',
+        'Os personagens realizam um diálogo amigável',
+        'Os personagens realizam um diálogo amigável',
     ],
     'resultado neutro':[
         'Os personagens realizam um diálogo neutro',
     ],
     'resultado negativo':[
+        'Os personagens realizam um diálogo hostil',
+        'Os personagens realizam um diálogo hostil',
         'Os personagens realizam um diálogo hostil',
         'Os personagens realizam um diálogo hostil',
         'Os personagens realizam um diálogo severo',
@@ -139,11 +143,12 @@ const oraculos = [
     'tipo': 'simples',
     'nome':'Diálogo severo',
     'resultado':[
-        'O diálogo envolve ameaça de morte, violência e ira',
+        'O diálogo envolve ameaças, violência e ódio',
         'O diálogo resulta em um combate, briga violenta ou ferimentos',
         'O diálogo resulta em um crime, problemas religiosos ou guerra',
         'O diálogo resulta em problemas para a vida de alguém que não é um dos personagens',
         'O diálogo resulta em problemas para alguém próximo de um dos personagens',
+        'O diálogo mancha a reputação dos personagens'
     ]
 },
 

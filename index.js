@@ -43,6 +43,7 @@ function processarOraculo(e){
            const oraculoResultado = rolarOraculo(oraculo);
            const HTMLData = criarHTML([oraculoResultado], oraculo, templateSimples);
            $noteLog.innerHTML += HTMLData;
+           $noteLog.scrollTop = $noteLog.scrollHeight;
         }
     }
 };
@@ -76,27 +77,26 @@ function getResultadoComplexo(oraculo){
     const $negative = document.getElementById('choice-negative');
     const $any = document.getElementById('choice-any');
 
-    
-    /* oraculo['resultado positivo'][Math.floor(Math.random())]
-    console.log(oraculo['resultado positivo']) */
     const roll = Math.floor(Math.random() * 100) + 1
     
     if ($positive.checked == true) {
-        if (roll > 40) {
+        if (roll <= 10) {
+            return  getResultadoSimples(oraculo['resultado negativo'])
+        } else if (roll > 10 && roll <= 60) {
             return  getResultadoSimples(oraculo['resultado positivo'])
         } else {
             return  getResultadoSimples(oraculo['resultado neutro'])
         }
     } else if ($neutral.checked == true){
-        if (roll > 50) {
+        if (roll <= 70) {
             return  getResultadoSimples(oraculo['resultado neutro'])
-        } else if (roll > 25) {
+        } else if (roll <= 85) {
             return  getResultadoSimples(oraculo['resultado positivo'])
         } else {
             return  getResultadoSimples(oraculo['resultado negativo'])
         }
     } else if ($negative.checked == true){
-        if (roll > 40) {
+        if (roll <= 40) {
             return  getResultadoSimples(oraculo['resultado negativo'])
         } else {
             return  getResultadoSimples(oraculo['resultado neutro'])
@@ -105,9 +105,9 @@ function getResultadoComplexo(oraculo){
         if (roll > 33) {
           return  getResultadoSimples(oraculo['resultado positivo'])
         } else if (roll > 66){
-          return  getResultadoSimples(oraculo['resultado neutro'])
+            return  getResultadoSimples(oraculo['resultado negativo'])
         } else {
-          return  getResultadoSimples(oraculo['resultado negativo'])
+            return  getResultadoSimples(oraculo['resultado neutro'])
         }
     }
 };
